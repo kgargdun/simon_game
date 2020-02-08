@@ -1,6 +1,6 @@
 var gamePattern = [];
 var gameColors = ["red", "yellow", "green", "blue"];
-var gameAudio = ["sounds/red.mp3", "sounds/yellow.mp3", "sounds/green.mp3", "sounds/blue.mp3", "sounds/wrong.mp3"]
+var gameAudio = ["red.mp3", "yellow.mp3", "green.mp3", "blue.mp3", "wrong.mp3"]
 var gamePlayAudio = [];
 var chosenOne;
 var userClickedPattern = [];
@@ -30,7 +30,7 @@ function nxt_seq() {
 }
 
 var temp;
-var clickAudio = new Audio("sounds/red.mp3");
+var clickAudio = new Audio("red.mp3");
 $(".btn").on("click", function() {
 
   userClickedPattern.push(this.id);
@@ -41,7 +41,7 @@ $(".btn").on("click", function() {
   }, 250);
 
 
-  clickAudio.src = "sounds/" + this.id + ".mp3";
+  clickAudio.src = this.id + ".mp3";
   clickAudio.play();
   index=index+1;
   if(index ===level)
